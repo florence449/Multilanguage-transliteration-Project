@@ -1,5 +1,5 @@
-from translater.char_spliter import *
 from translater.lag_code import *
+from translater.char_spliter import *
 
 def convert_to_kor(word, language):
 

@@ -1,4 +1,4 @@
-from word_class.phoneme_context_class import *
+from translater.lag_code.phoneme_context import *
 
 class Phoneme:
     """
@@ -14,7 +14,7 @@ class Phoneme:
     def __repr__(self):
         return f"Phoneme(code='{self.code}', kor_code='{self.kor_code}', type='{self.type}')"
 
-class Word:
+class CommonCode:
     """
     단어를 표현하는 클레스입니다.
     단어의 음운 변화및 한글식 음절 변화를 구현합니다.
