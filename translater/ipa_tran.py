@@ -1,5 +1,8 @@
 from translater.lag_code import *
 from translater.char_spliter import *
+from logger import get_logger
+
+logger = get_logger(__name__)
 
 def convert_to_kor(word, language):
 
@@ -8,25 +11,27 @@ def convert_to_kor(word, language):
         phonemes = [Phoneme(p[0], p[1], p[2]) for p in phonemes]
 
         if language == 'english':
-            wor_c = EnglishCode(phonemes)
+            word_con = EnglishCode(phonemes)
         elif language == 'portuguese':
-            wor_c = PortugueseCode(phonemes)
+            word_con = PortugueseCode(phonemes)
         elif language == 'french':
-            wor_c = FrenchCode(phonemes)
+            word_con = FrenchCode(phonemes)
         elif language == 'spanish':
-            wor_c = SpenishCode(phonemes)
+            word_con = SpenishCode(phonemes)
         else:
-            wor_c = CommonCode(phonemes)
+            word_con = CommonCode(phonemes)
 
-        wor_c.localization()
-        wor_c.gliding()
-        wor_c.rounding()
-        wor_c.nasalization()
-        wor_c.make_syll()
+        word_con.localization()
+        word_con.gliding()
+        word_con.rounding()
+        word_con.nasalization()
+        word_con.make_syll()
+        logger.info(word_con.syllables)
 
     else:
         phonemes = jap_splitter(word)
         phonemes = [Phoneme(p[0], p[1], p[2]) for p in phonemes]
-        wor_c = CommonCode(phonemes)
+        word_con = CommonCode(phonemes)
+        logger.info(word_con.phonemes)
 
-    return wor_c.combine_kor()
+    return word_con.combine_kor()

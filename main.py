@@ -15,7 +15,7 @@ app.add_middleware(
 @app.post("/transliterate")
 def transliterate(word: str, language: str):
     # 1단계: 단어 → IPA
-    ipa = ipa_converter(word, language)
+    ipa = ipa_converter(word, language).strip()
     # 2단계: IPA → 한글
     result = convert_to_kor(ipa, language)
     return {"result": result}
