@@ -17,7 +17,7 @@ def ipa_converter(word, language):
             result = phonemize(word, language='es-419', backend='espeak', njobs=1)
         elif language == 'norwegian':
             result = phonemize(word, language='nb', backend='espeak', njobs=1)
-        elif language == 'germanian':
+        elif language == 'german':
             result = phonemize(word, language='de', backend='espeak', njobs=1)
         elif language == 'italian':
             result = phonemize(word, language='it', backend='espeak', njobs=1)

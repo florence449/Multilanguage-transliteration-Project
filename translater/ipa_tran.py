@@ -34,4 +34,8 @@ def convert_to_kor(word, language):
         word_con = CommonCode(phonemes)
         logger.info(word_con.phonemes)
 
-    return word_con.combine_kor()
+    result = word_con.combine_kor()
+
+    logger.info(result)
+
+    return result

@@ -168,7 +168,7 @@ class CommonCode:
         sylls = []
         syll = []
 
-        allowed_onset_after_rounding = {'h', 'k', 'ɡ'}
+        allowed_onset_after_rounding = {'h', 'k', 'ɡ', 'ɣ'}
         can_final_consonant_list = {'m', 'n'}
         only_final_consonant_list = {'ŋ', 'l', 'FC_k', 'FC_p', 'FC_t', 'AP_N'}
         gliding_consonant = {'tʃ', 'ʃ', 'dʒ', 'ʒ'}

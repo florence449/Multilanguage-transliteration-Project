@@ -3,7 +3,7 @@ from translater.lag_code.phoneme_context import *
 
 class FrenchCode(CommonCode):
     """
-    프랑스어 음운변화를 반영하는 메스드의 집합입니다.
+    프랑스어 음운변화를 반영하는 메서드의 집합입니다.
     """
 
     gliding_consonant = {'ʃ', 'ʂ', 'ʝ', 'ɲ', 'tʃ', 'dʒ'}
