@@ -1,9 +1,9 @@
-from word_class.main_class import *
-from word_class.phoneme_context_class import *
+from translater.lag_code.common_code import *
+from translater.lag_code.phoneme_context import *
 
-class EnWord(Word):
+class EnglishCode(CommonCode):
     """
-    영어 음운변화를 반영하는 메스드의 집합입니다.
+    영어 음운변화를 반영하는 메서드의 집합입니다.
     """
     gliding_consonant = {'ʃ', 'ʂ', 'ʝ', 'ɲ'}
     def localization(self):
